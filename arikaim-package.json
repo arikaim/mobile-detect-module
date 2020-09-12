@@ -1,0 +1,10 @@
+{
+    "title": "Mobile Detect",
+    "name": "mobile",
+    "package-type": "module",
+    "version": "1.0.0",
+    "description": "Mobile detect middleware.",
+    "type": "middleware",
+    "disabled": false,
+    "repository": "https://github.com/arikaim/mobile-detect-module.git"         
+}
