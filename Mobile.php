@@ -32,7 +32,7 @@ class Mobile extends Module implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {       
         $request = $request->withAttribute('mobile',MobileUtils::mobile());   
-      
+             
         return $handler->handle($request);
     }
 }

@@ -2,7 +2,7 @@
     "title": "Mobile Detect",
     "name": "mobile",
     "package-type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Mobile detect middleware.",
     "type": "middleware",
     "disabled": false,
