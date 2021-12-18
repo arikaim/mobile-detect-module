@@ -9,13 +9,8 @@
 */
 namespace Arikaim\Modules\Mobile;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\MiddlewareInterface;
-use Psr\Http\Server\RequestHandlerInterface;
-
 use Arikaim\Core\Extension\Module;
-use Arikaim\Core\Utils\Mobile as MobileUtils;
+use Arikaim\Modules\Mobile\MobileMiddleware;
 
 /**
  * Mobile detect middleware class
@@ -23,16 +18,12 @@ use Arikaim\Core\Utils\Mobile as MobileUtils;
 class Mobile extends Module implements MiddlewareInterface
 {
     /**
-     * Process middleware
-     * 
-     * @param ServerRequestInterface  $request
-     * @param RequestHandlerInterface $handler
-     * @return ResponseInterface
-    */
-    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
-    {       
-        $request = $request->withAttribute('mobile',MobileUtils::mobile());   
-             
-        return $handler->handle($request);
+     * Boot module
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->addMiddlewareClass(MobileMiddleware::class);
     }
 }
