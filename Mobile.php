@@ -15,7 +15,7 @@ use Arikaim\Modules\Mobile\MobileMiddleware;
 /**
  * Mobile detect middleware class
  */
-class Mobile extends Module implements MiddlewareInterface
+class Mobile extends Module 
 {
     /**
      * Boot module
